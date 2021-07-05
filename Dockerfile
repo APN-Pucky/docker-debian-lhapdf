@@ -7,5 +7,4 @@ ENV PATH=$PATH:$LHAPDF/bin
 ENV LIBRARY_PATH=$LIBRARY_PATH:$LHAPDF/lib
 ENV LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$LHAPDF/lib
 #ENV PYTHONPATH=$PYTHONPATH:$LHAPDF/lib/python3.9/site-packages
-RUN lhapdf install CT14lo && lhapdf install CT14nlo
-RUN lhapdf install MSTW2008lo68cl && lhapdf install MSTW2008nlo68cl
+RUN for n in CT14lo CT14nlo MSTW2008lo68cl MSTW2008nlo68cl; do wget http://lhapdfsets.web.cern.ch/lhapdfsets/current/$n.tar.gz && do tar xvfz "$n" --directory $LHAPDF/share/LHAPDF/ ; done
