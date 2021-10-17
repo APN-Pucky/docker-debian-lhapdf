@@ -11,4 +11,5 @@ It is better to include pdfs to the image already instead of using lhapdf's serv
 * CT14nlo
 * MSTW2008lo68cl
 * MSTW2008lo68cl
+* CTEQ6L1
 
